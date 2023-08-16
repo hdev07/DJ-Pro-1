@@ -11,7 +11,9 @@
 	"help": {
 		"description": "Muestra todos los comandos y descripciones",
 		"embedTitle": "Ayuda de {botname}",
-		"embedDescription": "Listado de comandos"
+		"embedDescription": "Listado de comandos",
+		"embedFooter": "</> con el 🫶",
+		"embedAuthor": "help.embedAuthor"
 	},
 	"invite": {
 		"description": "Envía un link de invitación para el bot"
