@@ -12,8 +12,7 @@
 		"description": "Muestra todos los comandos y descripciones",
 		"embedTitle": "Ayuda de {botname}",
 		"embedDescription": "Listado de comandos",
-		"embedFooter": "</> con el 🫶",
-		"embedAuthor": "help.embedAuthor"
+		"embedFooter": "</> con el 🫶"
 	},
 	"invite": {
 		"description": "Envía un link de invitación para el bot"
@@ -76,7 +75,6 @@
 		"increasedVolume": "<@{author}> 🔊 Subió el volumen de la música, el volumen actual ahora es {volume}%",
 		"loopSong": "<@{author}> El bucle actual esta {loop}",
 		"stopSong": "<@{author}> ⏹ ¡Paró la música!",
-		"leaveChannel": "Saliendo del chat de voz...",
 		"songNotFound": "Música no encontrada",
 		"songAccessErr": "El video tiene restricción de edad, es privado o no está disponible"
 	},

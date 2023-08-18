@@ -1,13 +1,13 @@
 {
   "name": "djpro",
   "version": "2.7.0",
-  "description": "Discord music bot built with discord.js",
+  "description": "Bot de música construido con discord.js",
   "main": "index.ts",
-  "author": "Erit Islami <eritislami@gmail.com>",
+  "author": "Alejandro Cruz <hcruz0716@gmail.com>",
   "private": true,
-  "homepage": "https://github.com/eritislami/evobot",
-  "repository": "github:eritislami/evobot",
-  "bugs": "https://github.com/eritislami/evobot/issues",
+  "homepage": "https://github.com/hdev07/DJ-Pro",
+  "repository": "github:hdev07/DJ-Pro",
+  "bugs": "https://github.com/hdev07/DJ-Pro/issues",
   "engines": {
     "node": ">=16.11.0"
   },

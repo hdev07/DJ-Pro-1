@@ -12,7 +12,8 @@ export default {
       .setDescription(i18n.__("help.embedDescription"))
       .setColor("#78A4FA")
       .setThumbnail(interaction.client.user!.displayAvatarURL())
-      .setFooter({ text: i18n.__("help.embedFooter") });
+      .setAuthor({ name: interaction.user!.username, iconURL: interaction.user!.displayAvatarURL() })
+      .setFooter({ text: i18n.__("help.embedFooter"), iconURL: interaction.client.user!.displayAvatarURL() });
 
     commands.forEach((cmd) => {
       helpEmbed.addFields({

@@ -1,8 +1,7 @@
 {
   "name": "DJ pro",
-  "description": "🤖 Discord Music Bot built with discord.js",
-  "repository": "https://github.com/eritislami/evobot",
-  "logo": "https://i.imgur.com/JFxgbWH.png",
+  "description": "🤖 Bot de música construido con discord.js",
+  "repository": "https://github.com/hdev07/DJ-Pro",
   "keywords": [
     "discord",
     "discordjs",

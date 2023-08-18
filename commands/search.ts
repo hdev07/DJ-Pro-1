@@ -25,7 +25,7 @@ export default {
 
     const search = query;
 
-    await interaction.reply("⏳ Loading...").catch(console.error);
+    await interaction.reply("⏳ Buscando tu rola en mi repertorio...").catch(console.error);
 
     let results: Video[] = [];
 
@@ -38,7 +38,7 @@ export default {
     }
 
     if (!results || !results[0]) {
-      interaction.editReply({ content: i18n.__("search.noResults") })
+      interaction.editReply({ content: i18n.__("search.noResults") });
       return;
     }
 
@@ -52,14 +52,14 @@ export default {
     const row = new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(
       new StringSelectMenuBuilder()
         .setCustomId("search-select")
-        .setPlaceholder("Nothing selected")
+        .setPlaceholder("Nada seleccionado")
         .setMinValues(1)
         .setMaxValues(10)
         .addOptions(options)
     );
 
     const followUp = await interaction.followUp({
-      content: "Choose songs to play",
+      content: "Elige canciones para reproducir",
       components: [row]
     });
 
@@ -70,7 +70,10 @@ export default {
       .then((selectInteraction) => {
         if (!(selectInteraction instanceof StringSelectMenuInteraction)) return;
 
-        selectInteraction.update({ content: "⏳ Loading the selected songs...", components: [] });
+        selectInteraction.update({
+          content: "⏳ Cargando la rola que seleccionaste...",
+          components: []
+        });
 
         bot.slashCommandsMap
           .get("play")!

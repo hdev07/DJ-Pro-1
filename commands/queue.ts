@@ -23,7 +23,7 @@ export default {
     let currentPage = 0;
     const embeds = generateQueueEmbed(interaction, queue.songs);
 
-    await interaction.reply("⏳ Loading queue...");
+    await interaction.reply("⏳ Cargando la cola...");
 
     if (interaction.replied)
       await interaction.editReply({

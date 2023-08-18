@@ -10,8 +10,10 @@ export default {
   data: new SlashCommandBuilder()
     .setName("play")
     .setDescription(i18n.__("play.description"))
-    .addStringOption((option) => option.setName("song").setDescription("The song you want to play").setRequired(true)),
-  cooldown: 3,
+    .addStringOption((option) =>
+      option.setName("song").setDescription("La canción que quieres tocar").setRequired(true)
+    ),
+  cooldown: 2,
   permissions: [
     PermissionsBitField.Flags.Connect,
     PermissionsBitField.Flags.Speak,
@@ -45,14 +47,14 @@ export default {
 
     const url = argSongName;
 
-    if (interaction.replied) await interaction.editReply("⏳ Loading...").catch(console.error);
-    else await interaction.reply("⏳ Loading...");
+    if (interaction.replied) await interaction.editReply("⏳ Cargando...").catch(console.error);
+    else await interaction.reply("⏳ Cargando...");
 
     // Start the playlist if playlist url was provided
     if (playlistPattern.test(url)) {
-      await interaction.editReply("🔗 Link is playlist").catch(console.error);
+      await interaction.editReply("🔗 El enlace es una lista de reproducción").catch(console.error);
 
-      return bot.slashCommandsMap.get("playlist")!.execute(interaction, 'song');
+      return bot.slashCommandsMap.get("playlist")!.execute(interaction, "song");
     }
 
     let song;
